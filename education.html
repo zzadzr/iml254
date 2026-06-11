@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Education - Uzma's Personal Website</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4eae1; 
+}
+
+#header {
+    /* ... */
+}
+
+.nav-container {
+    background-color: #4a1525; 
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 20;
+}
+
+#navigation {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+#navigation a {
+    text-decoration: none;
+    padding: 6px 16px;
+    color: #ffe4e1; 
+}
+
+#navigation a.active {
+    color: #4a1525 !important;
+    background-color: #ffe4e1 !important;
+    padding: 6px 16px !important;
+    border-radius: 15px !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+    display: inline-block !important;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+    text-align: left;
+    margin-top: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(74, 21, 37, 0.15);
+}
+#navigation .dropdown-content a {
+    color: #4a1525 !important;
+    font-weight: bold !important;
+    padding: 12px 15px !important;
+    text-decoration: none;
+    display: block !important;
+    font-size: 13px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+#navigation .dropdown-content a:hover {
+    background-color: #ffe4e1 !important;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.tab-content {
+    display: none; 
+}
+#Education-Welcome {
+    display: block;
+}
+body:has(#p1:target) #Education-Welcome,
+body:has(#p2:target) #Education-Welcome,
+body:has(#p3:target) #Education-Welcome {
+    display: none;
+}
+#p1:target, #p2:target, #p3:target {
+    display: block;
+}
+
+.welcome-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.intro-pop-box {
+    flex: 1.1; 
+    background-color: #ffffff;
+    border: 3px solid #ffe4e1;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(74, 21, 37, 0.05);
+    text-align: justify;
+    color: #4a1525;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.gallery-wrapper {
+    width: 360px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60px; 
+}
+
+.image-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    width: 100%;
+}
+
+.photo-frame {
+    background-color: #ffe4e1;
+    padding: 12px; 
+    border-radius: 18px; 
+    box-shadow: 0 6px 15px rgba(74, 21, 37, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(74, 21, 37, 0.15);
+}
+
+.photo-frame img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 10px; 
+    display: block;
+}
+
+.gallery-caption {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #4a1525;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.edu-container {
+    max-width: 1050px; 
+    margin: 40px auto;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.edu-box {
+    background-color: #ffffff;
+    border: 1px solid #ffe4e1;
+    border-left: 6px solid #4a1525;
+    padding: 35px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 8px 20px rgba(74, 21, 37, 0.04);
+    text-align: left;
+    color: #4a1525;
+}
+
+.edu-heading {
+    color: #4a1525;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.edu-year {
+    font-style: italic;
+    font-size: 13px;
+    color: #6b2639;
+    margin-bottom: 25px;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.edu-gallery-3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    margin-top: 20px;
+    width: 100%;
+}
+
+.edu-frame-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edu-frame-with-caption .photo-frame {
+    width: 100%;
+}
+
+.inner-caption {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 13px;
+    color: #4a1525;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.note-box {
+    background-color: #ffe4e1;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    color: #4a1525;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+    <div class="nav-container">
+        <div id="navigation">
+            <a href="index.html">Home</a> |
+            
+            <div class="dropdown">
+                <a href="education.html" class="active">Education ▼</a>
+                <div class="dropdown-content">
+                    <a href="#p1">Primary School</a>
+                    <a href="#p2">High School</a>
+                    <a href="#p3">University</a>
+                </div>
+            </div> |
+            
+            <a href="achievements.html">Achievements</a> |
+            <a href="family.html">Family</a> |
+            <a href="interest.html">Interest</a> |
+            <a href="hobbies.html">Hobbies</a> |
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+
+<h1 align="center" style="font-family: 'Georgia', serif; font-style: italic; color: #4a1525; font-size: 28px; font-weight: normal; margin-top: 35px; margin-bottom: 25px; text-shadow: 1px 1px 2px rgba(255,255,255,0.6);">
+    ✧･ﾟ: *✧･ﾟ:* MY EDUCATION JOURNEY *:･ﾟ✧*:･ﾟ✧
+</h1>
+
+<div class="edu-container">
+    
+    <div id="Education-Welcome">
+        <div class="welcome-layout">
+            
+            <div class="intro-pop-box">
+                <h3 class="edu-heading" style="text-align: center; font-size: 22px;">HI! ˗ˋˏ ♡ ˎˊ˗</h3>
+                <div class="edu-details">
+                    <p>My educational journey started from kindergarten and has continued until now, as I pursue my diploma studies. Time flies so fast, and I am truly grateful for all the memories I have made throughout the years. Sometimes, I really wish I could go back to my school days. I miss the school environment and the moments when life felt much simpler without having to think about too many things.</p>
+
+                    <p>I truly love collecting memories, so at every school I attended, I made sure to capture and preserve those precious moments. Through this, I would like to share my happy memories throughout my journey as a student (⸝⸝>  ̫ <⸝⸝)</p>
+                                        
+                    <div class="note-box">
+                        Let's check out the dropdown menu above to explore my memories from elementary school to university!! XD
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-wrapper">
+                <div class="image-grid-container">
+                    <div class="photo-frame"><img src="sportday.jpg" alt="Memory 1" /></div>
+                    <div class="photo-frame"><img src="6tahun.jpg" alt="Memory 2" /></div>
+                    <div class="photo-frame"><img src="6147553494869676666.jpg" alt="Memory 3" /></div>
+                    <div class="photo-frame"><img src="tadika2.jpg" alt="Memory 4" /></div>
+                    <div class="photo-frame"><img src="akucomel.jpg" alt="Memory 5" /></div>
+                    <div class="photo-frame"><img src="comelsiak.jpg" alt="Memory 6" /></div>
+                </div>
+                <div class="gallery-caption"> The Beginning of My Education Journey >.<</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="p1" class="tab-content">
+        <div class="edu-box">
+            <h3 class="edu-heading">🏫 PRIMARY SCHOOL</h3>
+            <div class="edu-year">I began my primary school education at the age of seven at SK Seri Gombak 1. After studying there for two years, I transferred to SK Taman Samudra as it was closer to my home. I continued my studies there until Year 6.<br /><br />In addition, I was also a student at Sekolah Agama Rendah Darul Thulab Cawangan Gombak. I enrolled in the religious school when I was in Year 3 and completed my studies there alongside my primary school education.<br /><br />Below are some of the memories I cherish from my primary school years!<33</div>
+            
+            <div class="edu-gallery-3x2">
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="day1sekk.jpg" alt="SR Memory 1" /></div>
+                    <div class="inner-caption">My day 1 at school!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="uzmagradsek.jpg" alt="SR Memory 2" /></div>
+                    <div class="inner-caption">Finally graduated from primary school!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="khaldun.jpg" alt="SR Memory 3" /></div>
+                    <div class="inner-caption">my classmate<33</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="upkk.jpg" alt="SR Memory 4" /></div>
+                    <div class="inner-caption">We're about to take an UPKK's exam!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="sekagama.jpg" alt="SR Memory 5" /></div>
+                    <div class="inner-caption">Officially an alumni!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="skagama.jpg" alt="SR Memory 6" /></div>
+                    <div class="inner-caption">my #1supporter XD</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="p2" class="tab-content">
+        <div class="edu-box">
+            <h3 class="edu-heading">🏫 HIGH SCHOOL</h3>
+            <div class="edu-year">My best journey ever! I really miss the school environment, school stresses, and school bond. How I wish could back again at those moments :((</div>
+            
+            <div class="edu-gallery-3x2">
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="papan.jpg" alt="SM Memory 1" /></div>
+                    <div class="inner-caption">Road to SPM!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="rusyd.jpg" alt="SM Memory 2" /></div>
+                    <div class="inner-caption">Purple's Cheerlader Team!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="rindu.jpg" alt="SM Memory 3" /></div>
+                    <div class="inner-caption">Before back home >.<</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="pern.jpg" alt="SM Memory 4" /></div>
+                    <div class="inner-caption">Finally Business Coursework completed!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="permatacitra.jpg" alt="SM Memory 5" /></div>
+                    <div class="inner-caption">got certified with my girls!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="cekal.jpg" alt="SM Memory 6" /></div>
+                    <div class="inner-caption">My first ever classmate in high school XD</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="p3" class="tab-content">
+        <div class="edu-box">
+            <h3 class="edu-heading">🎓 DIPLOMA EDUCATION JOURNEY </h3>
+            <div class="edu-year"> After graduating from high school, I received an offer to further my studies at UiTM Kedah in the Library Informatics program. Although it is located far from my hometown, I was very happy to have the opportunity to study in Kedah. Even though I did not know anyone when I first stepped into the university, I am grateful to have been blessed with good friends who have supported and accompanied me throughout my academic journey here🌸</div>
+            
+            <div class="edu-gallery-3x2">
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="hiking.jpg" alt="Uni Memory 1" /></div>
+                    <div class="inner-caption">My first ever hiking experience! </div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="clasmet.jpg" alt="Uni Memory 2" /></div>
+                    <div class="inner-caption">Just us getting photos of each other infront of Cafe's Lake <33</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="tarung.jpg" alt="Uni Memory 3" /></div>
+                    <div class="inner-caption">Teater night!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="event.jpg" alt="Uni Memory 4" /></div>
+                    <div class="inner-caption">Art&Design Event Day with my lovely friends</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="rumet.jpg" alt="Uni Memory 5" /></div>
+                    <div class="inner-caption">My current roommates!</div>
+                </div>
+                
+                <div class="edu-frame-with-caption">
+                    <div class="photo-frame"><img src="dinner.jpg" alt="Uni Memory 6" /></div>
+                    <div class="inner-caption">Commander's dinner party >.<</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+</div> 
+
+<div id="footer" style="display: block !important; clear: both !important; width: 100% !important; background-color: #4a1525 !important; color: #ffffff !important; font-family: 'Century Gothic', sans-serif !important; font-size: 13px !important; padding: 20px 0 !important; text-align: center !important; margin-top: 60px !important; white-space: nowrap !important; box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3) !important;">
+    Copyright &copy; 2026 Uzma Zahra. All Rights Reserved.
+</div>
+
+</body>
+</html>

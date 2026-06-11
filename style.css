@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e2;   /* Warna Background Cream */
+    font-family: "Century Gothic", sans-serif; 
+}
+
+/* 1. THE BANNER CONTAINER */
+#header {
+    width: 100%; 
+    height: 300px;                    
+    background-image: url('muffin.jpg'); 
+    background-size: cover;           
+    background-position: center;      
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* 2. THE OVERLAY COVER */
+.full-cover {
+    width: 100%;
+    background-color: rgba(74, 21, 37, 0.9); /* Warna maroon pekat transparent */
+    padding: 15px 0;                             
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. WELCOME MARQUEE */
+#welcome {
+    width: 100%;                                 
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;             
+    margin-bottom: 10px;                         
+    font-family: "Century Gothic", sans-serif;
+}
+
+/* 4. NAVIGATION LINKS */
+#navigation {
+    width: 100%;                 
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;             
+    font-family: "Century Gothic", sans-serif;
+}
+
+#navigation a {
+    color: #ffffff;             
+    text-decoration: none;                       
+    margin: 0 5px;                               
+}
+
+#navigation a:hover {
+    color: #ffe4e1;             
+}
+
+#navigation a.active {
+    color: #ffe4e1 !important;    
+    background-color: #631d32;   
+    padding: 5px 10px;           
+    border-radius: 5px;          
+    font-weight: bold;
+}
+
+/* 5. CONTENT AREA */
+#content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 6. FOOTER STYLING */
+#footer {
+    width: 100%;
+    background-color: #4a1525;         
+    color: #ffffff;                    
+    font-family: 'Century Gothic', sans-serif; 
+    font-size: 12px;
+    padding: 15px 0;                   
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
